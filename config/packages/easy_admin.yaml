@@ -1,0 +1,9 @@
+easy_admin:
+    entities:
+        - App\Entity\Boutique
+        - App\Entity\Facture
+        - App\Entity\User
+        - App\Entity\Panier
+        - App\Entity\Produit
+        - App\Entity\Profile
+        - App\Entity\WishList
