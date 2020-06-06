@@ -38,16 +38,12 @@ class Boutique
      */
     private $prodboutique;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Produit", mappedBy="prodboutique")
-     */
-    private $produits;
+
 
     public function __construct()
     {
         $this->userboutique = new ArrayCollection();
         $this->prodboutique = new ArrayCollection();
-        $this->produits = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -141,34 +137,11 @@ class Boutique
         return $this;
     }
 
-    /**
-     * @return Collection|Produit[]
-     */
-    public function getProduits(): Collection
+
+    public function __toString()
     {
-        return $this->produits;
+        return  $this->Nom_boutique;
     }
 
-    public function addProduit(Produit $produit): self
-    {
-        if (!$this->produits->contains($produit)) {
-            $this->produits[] = $produit;
-            $produit->setProdboutique($this);
-        }
 
-        return $this;
-    }
-
-    public function removeProduit(Produit $produit): self
-    {
-        if ($this->produits->contains($produit)) {
-            $this->produits->removeElement($produit);
-            // set the owning side to null (unless already changed)
-            if ($produit->getProdboutique() === $this) {
-                $produit->setProdboutique(null);
-            }
-        }
-
-        return $this;
-    }
 }

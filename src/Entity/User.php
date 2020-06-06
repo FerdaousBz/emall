@@ -97,4 +97,9 @@ public function setUserWishL(?WishList $userWishL): self
 
     return $this;
 }
+
+    public function __toString()
+    {
+        return  $this->username;
+    }
 }

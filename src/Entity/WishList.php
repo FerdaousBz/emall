@@ -54,4 +54,9 @@ class WishList
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return  $this->Nom_wishL;
+    }
 }

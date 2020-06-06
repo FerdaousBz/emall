@@ -51,10 +51,7 @@ class Produit
      */
     private $boutique;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Boutique", inversedBy="produits")
-     */
-    private $prodboutique;
+
 
     public function getId(): ?int
     {
@@ -145,15 +142,8 @@ class Produit
         return $this;
     }
 
-    public function getProdboutique(): ?Boutique
+    public function __toString()
     {
-        return $this->prodboutique;
-    }
-
-    public function setProdboutique(?Boutique $prodboutique): self
-    {
-        $this->prodboutique = $prodboutique;
-
-        return $this;
+        return  $this->Nom_prod;
     }
 }
