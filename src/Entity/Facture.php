@@ -17,7 +17,7 @@ class Facture
     private $id;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string",length=10)
      */
     private $Num_fact;
 
@@ -46,12 +46,12 @@ class Facture
         return $this->id;
     }
 
-    public function getNumFact(): ?int
+    public function getNumFact(): ?string
     {
         return $this->Num_fact;
     }
 
-    public function setNumFact(int $Num_fact): self
+    public function setNumFact(string $Num_fact): self
     {
         $this->Num_fact = $Num_fact;
 
@@ -105,4 +105,10 @@ class Facture
 
         return $this;
     }
+    public function __toString()
+    {
+        return  $this->Num_fact;
+    }
+
+
 }

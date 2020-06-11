@@ -26,6 +26,7 @@ class Panier
      */
     private $qte_prod;
 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,4 +55,9 @@ class Panier
 
         return $this;
     }
+    public function __toString()
+    {
+        return  $this->Num_panier;
+    }
+
 }

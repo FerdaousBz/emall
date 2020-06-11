@@ -36,6 +36,16 @@ private $userFact;
  */
 private $userWishL;
 
+/**
+ * @ORM\OneToOne(targetEntity=Panier::class, cascade={"persist", "remove"})
+ */
+private $userPanier;
+
+/**
+ * @ORM\OneToOne(targetEntity=Profile::class, cascade={"persist", "remove"})
+ */
+private $userProfile;
+
 public function __construct()
     {
     parent::__construct();
@@ -101,5 +111,29 @@ public function setUserWishL(?WishList $userWishL): self
     public function __toString()
     {
         return  $this->username;
+    }
+
+    public function getUserPanier(): ?Panier
+    {
+        return $this->userPanier;
+    }
+
+    public function setUserPanier(?Panier $userPanier): self
+    {
+        $this->userPanier = $userPanier;
+
+        return $this;
+    }
+
+    public function getUserProfile(): ?Profile
+    {
+        return $this->userProfile;
+    }
+
+    public function setUserProfile(?Profile $userProfile): self
+    {
+        $this->userProfile = $userProfile;
+
+        return $this;
     }
 }
