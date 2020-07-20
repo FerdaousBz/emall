@@ -7,9 +7,10 @@
         "ext-iconv": "*",
         "easycorp/easyadmin-bundle": "^2.3",
         "friendsofsymfony/user-bundle": "^2.1",
+        "sensio/framework-extra-bundle": "^5.5",
         "symfony/console": "4.3.*",
         "symfony/dotenv": "4.3.*",
-        "symfony/flex": "^1.3.1",
+        "symfony/flex": "^1.9",
         "symfony/framework-bundle": "4.3.*",
         "symfony/orm-pack": "^1.0",
         "symfony/swiftmailer-bundle": "^3.4",
@@ -17,7 +18,7 @@
         "symfony/yaml": "4.3.*"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.15",
+        "symfony/maker-bundle": "^1.20",
         "symfony/web-server-bundle": "4.3.*"
     },
     "config": {
